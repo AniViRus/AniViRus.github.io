@@ -87,7 +87,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: fixed;
 }
 
 .bg-video {
@@ -182,4 +182,80 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 3;
+}
+
+.dynamic-elements {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0);
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.bot-title {
+  font-size: min(4rem, 5vw);
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.bot-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.bot-description {
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  text-align: justify;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  color: white;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25vh;
+}
+
+.bot-description p {
+  margin: 0;
+  text-indent: 1em;
+  line-height: 1.25;
+}
+
+.bot-description a {
+  color: #00b3ff;
+  text-decoration: none;
+  text-indent: 1em;
+  line-height: 1.25;
+}
+
+.bot-logo {
+  max-height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
