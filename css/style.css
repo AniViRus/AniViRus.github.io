@@ -77,7 +77,8 @@ body {
 .bg {
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,11 +88,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
 }
 
 .bg-video {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 0;
@@ -102,7 +103,7 @@ body {
 }
 
 .bg-filler {
-  position: absolute;
+  position: fixed;
   -o-object-fit: cover;
      object-fit: cover;
   top: 0;
@@ -113,9 +114,9 @@ body {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
-.logo {
-  top: 25vh;
-  bottom: 50vh;
+.logo-main {
+  top: 15vh;
+  bottom: 60vh;
   background-attachment: fixed;
   position: absolute;
   aspect-ratio: 6/1;
@@ -124,7 +125,7 @@ body {
   z-index: 2;
 }
 
-.logo-img {
+.logo-main-img {
   margin: auto auto;
   display: block;
   background-attachment: fixed;
@@ -135,6 +136,88 @@ body {
      object-fit: contain;
 }
 
-.logo:hover {
+.logo-main:hover {
   opacity: 0.8;
+}
+
+.logo-container {
+  position: fixed;
+  top: 80vh;
+  bottom: 0vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  min-height: 0;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 0;
+}
+
+.logo-img {
+  height: 10vh;
+  aspect-ratio: 1/1;
+}
+
+.logo-img:hover {
+  -webkit-filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+          filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+.bot-description {
+  font-family: "Inter", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.bot-description h1 {
+  font-size: 10rem;
+  margin-bottom: 1rem;
+}
+
+.bot-description p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.bot-description a {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.bot-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+  margin: 1rem auto 0;
 }
